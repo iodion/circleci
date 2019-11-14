@@ -28,9 +28,9 @@ workflows:
   another_workflow:
     jobs:
       - one
-      - two:
-          requires:
-            - one
+      - two
+         requires:
+           - one
 
 
 # a job indicates a stage
