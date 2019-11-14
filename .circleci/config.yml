@@ -28,7 +28,7 @@ workflows:
   another_workflow:
     jobs:
       - one
-      - two
+      - two:
           requires:
             - one
 
