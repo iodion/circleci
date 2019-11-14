@@ -4,10 +4,14 @@ version: 2
 # jobs : collection of defined stages 
 jobs:
   one:
+    docker:
+      - image: bash
     steps:
       - run:
         command: echo "one"
   two:
+    docker:
+      - image: bash
     steps:
       - run:
         command: echo "two"
