@@ -14,7 +14,7 @@ jobs:
       - image: bash
     steps:
       - run:
-          command: echo "two"
+          command: echo "two---two"
 
 
 # pipeline + stages
