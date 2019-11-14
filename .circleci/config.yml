@@ -25,6 +25,9 @@ workflows:
     jobs:
       - one
       - two
+  another_workflow:
+    jobs:
+      - two
 
 
 # a job indicates a stage
