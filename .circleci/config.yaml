@@ -1,0 +1,28 @@
+version: 2
+
+# stages
+# jobs : collection of defined stages 
+jobs:
+  one:
+    steps:
+      - run:
+        command: echo "one"
+  two:
+    steps:
+      - run:
+        command: echo "two"
+
+
+# pipeline + stages
+# orchestration of stages
+workflows:
+  version: 2
+  my_workflow:
+    jobs:
+      - one
+      - two
+
+
+# a job indicates a stage
+# while a group of jobs, is a group of stages
+
