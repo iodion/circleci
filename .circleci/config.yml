@@ -8,13 +8,13 @@ jobs:
       - image: bash
     steps:
       - run:
-        command: echo "one"
+          command: echo "one"
   two:
     docker:
       - image: bash
     steps:
       - run:
-        command: echo "two"
+          command: echo "two"
 
 
 # pipeline + stages
