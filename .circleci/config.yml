@@ -29,8 +29,8 @@ workflows:
     jobs:
       - one
       - two
-         requires:
-           - one
+          requires:
+            - one
 
 
 # a job indicates a stage
