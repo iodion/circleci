@@ -1,38 +1,45 @@
 version: 2
 
-# stages
-# jobs : collection of defined stages 
+# jobs are like stages in jenkins
+# jobs is like a package of core functions
 jobs:
   one:
     docker:
       - image: bash
     steps:
       - run:
-          command: echo "one"
+          command: 
+            - pwd
+            - ls -la
+            - echo "one"
   two:
     docker:
       - image: bash
+    working_directory
     steps:
       - run:
           command: echo "two---two"
 
 
-# pipeline + stages
-# orchestration of stages
+# workflows are like pipeline in jenkins
+# workflows are like controllers or handlers using packaged core functions
+# workflow is were orehestation is done.
 workflows:
   version: 2
-  my_workflow:
+  my_workflow: # parallel workflow
     jobs:
       - one
       - two
-  another_workflow:
+      - three:
+          requires:
+            - one
+  another_workflow: # sequenced workflow
     jobs:
       - one
       - two:
           requires:
             - one
+  2
 
 
-# a job indicates a stage
-# while a group of jobs, is a group of stages
 
