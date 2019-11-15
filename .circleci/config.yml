@@ -8,11 +8,11 @@ jobs:
       - image: bash
     steps:
       - run:
-        command: pwd
+          command: pwd
       - run:
-        command: ls -la
+          command: ls -la
       - run:
-        command: echo "one"
+         command: echo "one"
   two:
     docker:
       - image: bash
