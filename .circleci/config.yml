@@ -15,7 +15,6 @@ jobs:
   two:
     docker:
       - image: bash
-    working_directory
     steps:
       - run:
           command: echo "two---two"
