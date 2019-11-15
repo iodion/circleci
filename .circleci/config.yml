@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 # jobs are like stages in jenkins
 # jobs is like a package of core functions
@@ -24,7 +24,7 @@ jobs:
 # workflows are like controllers or handlers using packaged core functions
 # workflow is were orehestation is done.
 workflows:
-  version: 2
+  version: 2.1
   my_workflow: # parallel workflow
     jobs:
       - one
@@ -38,7 +38,6 @@ workflows:
       - two:
           requires:
             - one
-  2
 
 
 
