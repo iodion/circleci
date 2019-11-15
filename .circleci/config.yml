@@ -12,11 +12,13 @@ jobs:
       - run:
           command: ls -la
       - run:
-         command: echo "one"
+         command: mkdir -p a/b/c
   two:
     docker:
       - image: bash
     steps:
+      - run:
+          command: ls -la
       - run:
           command: echo "two---two"
 
@@ -30,6 +32,7 @@ workflows:
     jobs:
       - one
       - two
+      # placeholder job or stub job
       - three:
           type: approval
           requires:
