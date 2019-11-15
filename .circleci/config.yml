@@ -31,6 +31,7 @@ workflows:
       - one
       - two
       - three:
+          type: approval
           requires:
             - one
   another_workflow: # sequenced workflow
